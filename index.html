@@ -4,22 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts for Navigation Bar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- End of Fonts -->
     <title>Webpage</title>
     <style>
-        *{
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #myTopnav{
+        border-bottom: 1px solid rgb(229, 229, 229);
+        background-color: rgb(250, 250, 250);
+        position: sticky; 
+        top:0;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+    } 
+    .nname{
+        margin: 0;
+        margin-left: 33vw;
+        padding: 14px 16px 14px 0;
+        font-size: 4vw;
+        justify-content: center;
+        font-family: 'Rubik Moonrocks', cursive;
+        font-weight: unset;
+        color: rgb(0, 0, 0);
+    }
+    .test1{
+        height: 100vw;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: rgb(239, 238, 238);
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: rgb(239, 239, 239);
+        color: rgb(0, 0, 0);
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+            float:right;
+            display: block;
         }
-        a{
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        .nname{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 7vw;
+        }
+    }
+        /* a{
             font-size: x-large;
             margin-right: 10%;
             color: orangered;
             text-decoration:none;
-        }
-        a:hover{
+        } */
+        /* a:hover{
             color: blue;
             font-style: none;
-        }
-        #header{
+        } */
+        /* #header{
             margin: 0px;
             padding: 0px;
         }
@@ -27,8 +109,9 @@
             width: 100%;
             text-align:center;
             background-color: aliceblue;
-        }
+        } */
         #content-box{
+            padding-top: 40px;
             text-align:center;
             display:inline-block;
         }
@@ -48,26 +131,35 @@
     </style>
 </head>
 <body>
-    <div id="header">
+    <!-- <div id="header">
         <img src="Logo USMS Transparent.png" alt="USMS Logo" align="left" style=" height:10%; width:10%; padding: 0; margin: 0;">
         <h1> University of Sufism <br> & Modern Sciences <br> Bhitshah.</h1>
-    </div>
-    <div id="links">
+    </div> -->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <h1 class="nname">Code with Brain</h1>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <!-- <div id="links">
         <a href="#" target="_blank"> Home </a>
         <a href="#" target="_blank"> Course </a>
         <a href="#" target="_blank"> About </a>
-    </div>
+    </div> -->
     <div id="content-box">
         <div class="text-box">
-            <!-- <div id="color"></div> -->
-            <h3>Example 1</h3>
+            <h3>Learn</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum amet? Sit iusto ullam nostrum in rem officia maiores fuga ex labore esse fugiat</p>
         </div>
         <div class="text-box">
-            <h3>Example 1</h3>
+            <h3>Notes</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum amet? Sit iusto ullam nostrum in rem officia maiores fuga ex labore esse fugiat</p>
         </div><div class="text-box">
-            <h3>Example 1</h3>
+            <h3>Practice</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum amet? Sit iusto ullam nostrum in rem officia maiores fuga ex labore esse fugiat</p>
         </div>
         <div class="text-box">
@@ -86,5 +178,3 @@
 </div>
 </body>
 </html>
-<!-- <div class="course__card-fee" style="background-color: #52a788; font-size: 16px; font-weight: bold;">
-    <i class="fas fa-circle" style="color: red"></i> On-Campus And Online -->
